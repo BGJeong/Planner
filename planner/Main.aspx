@@ -137,8 +137,8 @@
             <!--footer>
                 <div class="footer">
                     <ul class="info">
-                        <li>사업자등록번호 : 856-27-00069</li><li>통신판매업 신고번호 : 2015-인천남동구-0397호</li><li>전화번호 : 0505-550-9600</li><br><li>주소 : 인천시 남구 경인로 229 인천IT타워 1206</li><li class="copyright">Nanuly © 2016 All rights reserved</li>
-                    </ul>
+                       </li>JeongBoGil </ul>
+		       
                 </div>
             </!--footer-->
         </div>
