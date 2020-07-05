@@ -1,0 +1,57 @@
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Your branch is up to date with 'origin/master'.
+#
+# Changes to be committed:
+#	new file:   planner/Account/Login.aspx
+#	new file:   planner/Account/Login.aspx.cs
+#	new file:   planner/Account/Register.aspx
+#	new file:   planner/Account/Register.aspx.cs
+#	new file:   planner/Board/list.aspx
+#	new file:   planner/Board/list.aspx.cs
+#	new file:   planner/Board/modify.aspx
+#	new file:   planner/Board/modify.aspx.cs
+#	new file:   planner/Board/view.aspx
+#	new file:   planner/Board/view.aspx.cs
+#	new file:   planner/Board/write.aspx
+#	new file:   planner/Board/write.aspx.cs
+#	new file:   planner/Main.aspx
+#	new file:   planner/Menu/Top.aspx
+#	new file:   planner/Menu/Top.aspx.cs
+#	new file:   planner/Planner.aspx
+#	new file:   planner/Planner.aspx.cs
+#	new file:   planner/Web.Debug.config
+#	new file:   planner/Web.config
+#	new file:   planner/best.aspx
+#	new file:   planner/best.aspx.cs
+#	new file:   planner/css/Site.css
+#	new file:   planner/css/bootstrap.css
+#	new file:   planner/css/bootstrap.min.css
+#	new file:   planner/css/jquery.bxslider.css
+#	new file:   planner/db/Wdb.udl
+#	new file:   planner/db/Web.sql
+#	new file:   planner/img/back1.jpg
+#	new file:   planner/img/back2.jpg
+#	new file:   planner/img/bx_loader.gif
+#	new file:   planner/img/controls.png
+#	new file:   planner/img/images.png
+#	new file:   planner/img/kakao_login_medium_narrow.png
+#	new file:   planner/img/logo.png
+#	new file:   planner/img/main.jpg
+#	new file:   planner/img/main1.jpg
+#	new file:   planner/img/main2.jpg
+#	new file:   "planner/img2/\352\267\270\353\236\234\353\223\234\354\272\220\353\205\204.jpg"
+#	new file:   "planner/img2/\353\202\230\354\235\264\354\225\204\352\260\200\353\235\274 \355\217\255\355\217\254.jpg"
+#	new file:   "planner/img2/\353\241\234\353\247\210.jpg"
+#	new file:   "planner/img2/\353\252\260\353\224\224\353\270\214.jpg"
+#	new file:   "planner/img2/\353\260\234\353\246\254.jpg"
+#	new file:   "planner/img2/\353\262\240\353\213\210\354\212\244.jpg"
+#	new file:   "planner/img2/\355\214\214\353\246\254.jpg"
+#	new file:   "planner/img2/\355\225\230\354\231\200\354\235\264.jpg"
+#	new file:   "planner/img2/\355\231\215\354\275\251.PNG"
+#	new file:   planner/main.aspx.cs
+#	new file:   planner/script/bootstrap.js
+#	new file:   planner/script/jquery-1.10.2.js
+#	new file:   planner/script/jquery.bxslider.min.js
+#
