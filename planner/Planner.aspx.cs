@@ -63,9 +63,15 @@ public partial class Planner : System.Web.UI.Page
 
         
         String Title = Request["title"];
-        if(Title == null)
+        if(Title == null || Title=="")
         {
-            Title = "제목을 입력하세요";
+            string error = @"
+            <script type='text/javascript'>
+                 window.alert('경고창을 생성 합니다.');
+            </script>
+            ";
+
+            Response.Write(error);
         }
 
         Object uid = Session["uid"];

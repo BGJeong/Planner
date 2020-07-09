@@ -45,6 +45,7 @@
                     <li><a href="/Planner.aspx">플래너</a></li>
                     <li><a href="/Best.aspx">추천여행지</a></li>
                     <li><a href="/Board/list.aspx">자유게시판</a></li>
+                    <li><a href="/planboard.aspx">내 플랜</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <% if (Session["uid"] == null) { %>

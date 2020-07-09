@@ -49,6 +49,7 @@
                     <li><a href="/Planner.aspx">플래너</a></li>
                     <li><a href="/Best.aspx">추천여행지</a></li>
                     <li><a href="/Board/list.aspx">자유게시판</a></li>
+                    <li><a href="/planboard.aspx">내 플랜</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <% if (Session["uid"] == null) { %>
@@ -113,7 +114,7 @@
         </div>
     </div>
 </body>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_27EVoPwzTl0wtySSzKv9ESTlv3Uf1oc&signed_in=true&libraries=places&callback=initMap" async defer></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZdtgIY8Nqr6s-jPbJppE83bvEAL0fIHE&signed_in=true&libraries=places&callback=initMap" async defer></script>
 <script>
     $(document).ready(function () {
         $.ajax({

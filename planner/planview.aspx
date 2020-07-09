@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="write.aspx.cs" Inherits="Board_write" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="planview.aspx.cs" Inherits="planview" %>
 
 <!DOCTYPE html>
 
@@ -6,8 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-     <link href="/css/bootstrap.css" rel="stylesheet">
-        <link href="/css/Site.css" rel="stylesheet">
+         <link href="css/bootstrap.css" rel="stylesheet"/>
+        <link href="css/Site.css" rel="stylesheet"/>
     <style>
     ol, ul { list-style: none; }
     footer { background: #222; color: #888; }
@@ -29,9 +29,8 @@
     <script src="/script/bootstrap.js" type="text/javascript"></script>
 </head>
 <body>
-
-    <form id="form1" runat="server">
-             <div class="navbar navbar-inverse navbar-fixed-top">
+    <form id="form2" runat="server">
+       <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -59,35 +58,66 @@
             </div>
         </div>
     </div>
-    <div>
-      <div class="container body-content">
-            <h2>글쓰기</h2>
-            <hr />
-            <div class="form-horizontal">
-                <div id="MainContent_ctl00" class="text-danger" data-valsummary="true" style="display:none;"></div>
-                <div class="form-group">
-                    <asp:Label runat="server" CssClass="col-md-2 control-label">제목</asp:Label>
-                    <div class="col-md-10">
-                        <asp:TextBox runat="server" ID="title" CssClass="form-control" autocomplete="off" />
-                        <label class="title_label" style="display:none;"></label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <asp:Label runat="server" CssClass="col-md-2 control-label">내용</asp:Label>
-                    <div class="col-md-10">
-                        <asp:TextBox runat="server" ID="content" CssClass="form-control" Width="1000px" Height="200px" style="resize:none"   TextMode="MultiLine" />
-                        <label class="content_label" style="display:none;"></label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-offset-2 col-md-10">
-                        <asp:Button runat="server" OnClick="btnSaveClick" ID="btn_save" Text="글쓰기" CssClass="btn btn-default"/>
-                        <asp:Button runat="server" OnClick="btn_cancel_Click" ID="btn_cancel" Text="취소" CssClass="btn btn-default"/>
-                    </div>
-                </div>
+    <div class="container body-content">
+      <h2>상세보기</h2>
+        <HR /><br />
+        <div class="form-horizontal">
+         <table class="table table-striped" >
+        <tr>
+            <td>
+                작성자
+            </td>
+            <td>
+                <asp:Label ID="LaB_Writer" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                제목
+            </td>
+            <td>
+                <asp:Label ID="LaB_Title" runat="server"></asp:Label>
+                <asp:Label ID="LaB_lng" runat="server"></asp:Label>
+                <asp:Label ID="LaB_lat" runat="server"></asp:Label>
+                <asp:Label ID="LaB_addr" runat="server"></asp:Label>
+            </td>
+        </tr>
+        <tr style="height:200px">
+            <td style="width:100px">
+                글내용
+            </td>
+            <td style="width:600px">
+                <div id="map" style="width:800px; height:450px;"></div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" align="right">
+                <asp:Button Text="목록" runat="server"  ID="btn_List" 
+                    onclick="btn_List_Click" CssClass="btn btn-default" />
+                <asp:Button ID="btn_Delete" Text="삭제" runat="server"   OnClientClick="return confirm('정말 삭제하시겠습니까?')"
+                    onclick="btn_Delete_Click" class="btn btn-danger" />
+                <asp:Button runat="server" ID="btn_Modify"  Text="수정" 
+                    onclick="Modify_Click" CssClass="btn btn-default" />
+            </td>
+        </tr>
+    </table>
             </div>
-            
     </div>
     </form>
 </body>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZdtgIY8Nqr6s-jPbJppE83bvEAL0fIHE&callback=initMap&libraries=&v=weekly"defer></script>
+        <script>
+            
+            var temp = planview.aspx.pageConfig.lat;
+            console.log(temp);
+            
+            var map;
+            function initMap() {
+                map = new google.maps.Map(document.getElementById("map"), {
+                    center: { lat: -34.397, lng: 150.644 },
+                    zoom: 8
+                });
+            }
+       </script>
 </html>

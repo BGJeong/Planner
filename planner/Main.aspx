@@ -66,6 +66,7 @@
                         <li><a href="/Planner.aspx">플래너</a></li>
                         <li><a href="/Best.aspx">추천여행지</a></li>
                         <li><a href="/Board/list.aspx">자유게시판</a></li>
+                        <li><a href="/planboard.aspx">내 플랜</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <% if (Session["uid"] == null) { %>
@@ -104,8 +105,8 @@
                 </ul>
             </div>     
             
-             <div class="row">
-        <div class="col-md-4">
+        <div class="row">
+            <div class="col-md-4">
             <h2>플래너 새로 작성하기</h2>
             <p>
                 여행을 다닐때 필요한 여행계획, 비용 산출등의 정보를 여기에서 추가하세요!
@@ -113,8 +114,8 @@
             <p>
                 <a class="btn btn-default" href="./Planner.aspx">더보기</a>
             </p>
-        </div>
-        <div class="col-md-4">
+         </div>
+         <div class="col-md-4">
             <h2>여행을 떠나고 싶으신가요?</h2>
             <p>
                 사람들의 발길이 잦아 북적북적한, 혹은 조용한 나만의 여행지를 찾고 싶으시면 여기에서 확인하세요!
@@ -122,8 +123,8 @@
             <p>
                 <a class="btn btn-default" href="./best.aspx">더보기 &raquo;</a>
             </p>
-        </div>
-        <div class="col-md-4">
+         </div>
+         <div class="col-md-4">
             <h2>궁금한 것이 있으신가요 ?</h2>
             <p>
                 평소 궁금했던 것, 혹은 사람들과의 소통이 필요하시다면 여기에서 확인하세요!
@@ -131,18 +132,9 @@
             <p>
                 <a class="btn btn-default" href="./Board/list.aspx">더보기 &raquo;</a>
             </p>
-        </div>
-    </div>       
-            
-            <!--footer>
-                <div class="footer">
-                    <ul class="info">
-                       </li>JeongBoGil </ul>
-		       
-                </div>
-            </!--footer-->
-        </div>
-    
+         </div>
+        </div>      
+       </div>   
     </form>
 </body>
 <script>

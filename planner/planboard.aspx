@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="list.aspx.cs" Inherits="list" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="planboard.aspx.cs" Inherits="planboard" %>
 
 <!DOCTYPE html>
 
@@ -61,15 +61,14 @@
         </div>
     </div>
         <div class="container body-content">
-            <h2>자유 게시판</h2>
+            <h2>내 플랜 확인</h2>
             <hr />
             <div class="form-horizontal">
                 <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="table" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Horizontal" Width="701px" DataKeyNames="id">
                     <Columns>
                         <asp:BoundField DataField="id" HeaderText="글번호" InsertVisible="False" ReadOnly="True" SortExpression="id" />
                         <asp:BoundField DataField="uid" HeaderText="작성자" SortExpression="uid" />
-                        <asp:HyperlinkField DataTextField="title" HeaderText="제목" SortExpression="title" datanavigateurlfields="id" datanavigateurlformatstring="~/Board/view.aspx?param={0}" />
-                        <asp:BoundField DataField="date" HeaderText="작성일" SortExpression="date" />
+                        <asp:HyperlinkField DataTextField="title" HeaderText="제목" SortExpression="title" datanavigateurlfields="id" datanavigateurlformatstring="planview.aspx?param={0}" />
                     </Columns>
                     <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
                     <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
@@ -81,7 +80,7 @@
                     <SortedDescendingHeaderStyle BackColor="#242121" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
-                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=JEONGBOGIL-PC;Initial Catalog=Basic;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [uid], [title], [date], [id] FROM [board] ORDER BY [id] DESC"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=JEONGBOGIL-PC;Initial Catalog=Basic;Integrated Security=True" ProviderName="System.Data.SqlClient" SelectCommand="SELECT [uid], [title], [id] FROM [planner] ORDER BY [id] DESC"></asp:SqlDataSource>
                   <% if (Session["uid"] != null) { %>
                     <a class="btn btn-default" href="./write.aspx">글쓰기</a> 
                   <% } else { %>
